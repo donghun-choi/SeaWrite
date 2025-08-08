@@ -1,0 +1,3 @@
+openai>=0.27,<1
+whispercpp>=0.0.17
+pytest>=7.0
