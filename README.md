@@ -24,30 +24,6 @@ The command produces two files next to the original audio file:
 To enable summarization, set an `OPENAI_API_KEY` environment variable. Without
 it, the summarizer falls back to returning the original transcript with a notice.
 
-## Docker
-
-If you would rather avoid setting up a Python environment, SeaWrite can run
-inside a container.
-
-Build the image:
-
-```
-docker build -t seawrite .
-```
-
-Transcribe an audio file by mounting the working directory so outputs appear
-next to the input file:
-
-```
-docker run --rm -v $(pwd):/data seawrite /data/<audio_file>
-```
-
-Provide an `OPENAI_API_KEY` when you want summaries:
-
-```
-docker run --rm -e OPENAI_API_KEY=... -v $(pwd):/data seawrite /data/<audio_file>
-```
-
 ## Development
 
 Install dependencies:
